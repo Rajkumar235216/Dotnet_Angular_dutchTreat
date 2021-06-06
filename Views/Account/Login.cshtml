@@ -1,0 +1,45 @@
+﻿@model LoginViewModel
+@{
+    ViewBag.title = "Log In";
+}
+@section Scripts{
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    @*<script src="~/node_modules/jquery-validation-unobtrusive-bootstrap/dist/unobtrusive-bootstrap.js"></script>*@
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+<div class="col-md-4 offset-md-4">
+    <h2 class="text-center">@ViewBag.title</h2>
+
+    <div class="card card-body bg-light">
+        <form method="post">
+
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="UserName">UserName</label>
+                <input type="text" asp-for="UserName" value="" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                <input type="password" asp-for="Password" value="" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" asp-for="RememberMe" value="" class="form-check-input" />
+                    <label asp-for="RememberMe" class="form-check-label">RememberMe</label>
+                </div>
+                <span asp-validation-for="RememberMe" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" name="Login" value="Login" class="btn btn-success">
+                <div class="text-success">@ViewBag.UserMessage</div>
+            </div>
+        </form>
+    </div>
+</div>

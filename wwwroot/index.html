@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dutch Street</title>
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+<h1>Dutch Street</h1>
+<div class="product-info">
+    <img src="img/VanGogh.jpg" />
+    <h3>Mug</h3>
+    <ul class="product-props">
+        <li>Price : 10Rs.</li>
+        <li>Artist : Van Gough</li>
+        <li>Title :</li>
+        <li>Description : Self Potrait</li>
+    </ul>
+    <button id="buy_button">Buy</button>
+</div>
+ <div id="theForm">
+     <form action="/" method="post">
+         <label>Name</label>
+         <br />
+         <input type="text" name="name" value="" required />
+         <br />
+         <label>Email</label>
+         <br />
+         <input type="email" name="email" value="" required />
+         <br />
+         <label>Subject</label>
+         <br />
+         <input type="text" name="subject" value="" required />
+         <br />
+         <label>Message</label>
+         <br />
+         <textarea required></textarea>
+         <br />
+         <input type="submit" name="submit" value="Send Details"  />
+     </form>
+ </div>
+
+    <div class="">
+        <div id="login_toggle">Login</div>
+        <form action="/" method="post" class="pop_up_form">
+            <div>
+                <label>UserName</label>
+                <input type="text" name="username" value="" />
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" value="" />
+            </div>
+            <div>
+                <input type="checkbox" name="check" value="" />
+                <label>Remember Me</label>
+            </div>
+            <div>
+                <input type="submit" name="login" value="Login" />
+            </div>
+        </form>
+    </div>
+
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+ <script src="js/index.js"></script>
+
+</body>
+</html>
